@@ -1,3 +1,6 @@
+---
+output: pdf_document
+---
 Coursera class on Practical Machine Learning: classification of physical exercises
 ========================================================
 

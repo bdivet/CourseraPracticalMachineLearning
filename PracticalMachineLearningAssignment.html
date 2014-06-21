@@ -101,48 +101,48 @@ print(modelFit$finalModel)</code></pre>
 ##                      Number of trees: 500
 ## No. of variables tried at each split: 27
 ## 
-##         OOB estimate of  error rate: 1.06%
+##         OOB estimate of  error rate: 1.12%
 ## Confusion matrix:
 ##      A    B    C    D    E class.error
-## A 2783    5    2    0    0    0.002509
-## B   24 1858   14    2    1    0.021590
-## C    0   12 1691    8    0    0.011689
-## D    0    1   23 1583    1    0.015547
-## E    0    1    2    8 1793    0.006098</code></pre>
+## A 2782    5    1    1    1    0.002867
+## B   31 1856   12    0    0    0.022643
+## C    0   16 1687    8    0    0.014027
+## D    0    1   22 1584    1    0.014925
+## E    0    2    4    5 1793    0.006098</code></pre>
 <pre class="r"><code>ConfusionMatrix&lt;-confusionMatrix(training.cv$classe,predict(modelFit,training.cv))
 print(ConfusionMatrix)</code></pre>
 <pre><code>## Confusion Matrix and Statistics
 ## 
 ##           Reference
 ## Prediction    A    B    C    D    E
-##          A 2788    0    1    0    1
-##          B   17 1876    5    0    0
-##          C    0   11 1688   12    0
-##          D    0    1   30 1575    2
-##          E    0    2    9   10 1782
+##          A 2788    2    0    0    0
+##          B   28 1858   12    0    0
+##          C    0   18 1677   16    0
+##          D    0    1   34 1571    2
+##          E    0    0    5    6 1792
 ## 
 ## Overall Statistics
 ##                                         
-##                Accuracy : 0.99          
-##                  95% CI : (0.988, 0.992)
-##     No Information Rate : 0.286         
+##                Accuracy : 0.987         
+##                  95% CI : (0.985, 0.989)
+##     No Information Rate : 0.287         
 ##     P-Value [Acc &gt; NIR] : &lt;2e-16        
 ##                                         
-##                   Kappa : 0.987         
+##                   Kappa : 0.984         
 ##  Mcnemar's Test P-Value : NA            
 ## 
 ## Statistics by Class:
 ## 
 ##                      Class: A Class: B Class: C Class: D Class: E
-## Sensitivity             0.994    0.993    0.974    0.986    0.998
-## Specificity             1.000    0.997    0.997    0.996    0.997
-## Pos Pred Value          0.999    0.988    0.987    0.979    0.988
-## Neg Pred Value          0.998    0.998    0.994    0.997    1.000
-## Prevalence              0.286    0.193    0.177    0.163    0.182
-## Detection Rate          0.284    0.191    0.172    0.161    0.182
+## Sensitivity             0.990    0.989    0.970    0.986    0.999
+## Specificity             1.000    0.995    0.996    0.995    0.999
+## Pos Pred Value          0.999    0.979    0.980    0.977    0.994
+## Neg Pred Value          0.996    0.997    0.994    0.997    1.000
+## Prevalence              0.287    0.192    0.176    0.162    0.183
+## Detection Rate          0.284    0.189    0.171    0.160    0.183
 ## Detection Prevalence    0.284    0.193    0.174    0.164    0.184
-## Balanced Accuracy       0.997    0.995    0.986    0.991    0.998</code></pre>
-<p>The Out Of Bags estimate of error rate on the training set is 1.03%.<br />The accuracy rate on the cross validation set is 0.9897 The model is performing quite well in and out of sample, which leads us to keep this model to predict the classe variable on the test set. The model achieved a perfect classification on the 20 instances of the test set.</p>
+## Balanced Accuracy       0.995    0.992    0.983    0.991    0.999</code></pre>
+<p>The Out Of Bags estimate of error rate on the training set is 1.03%.<br />The accuracy rate on the cross validation set is 0.9874 The model is performing quite well in and out of sample, which leads us to keep this model to predict the classe variable on the test set. The model achieved a perfect classification on the 20 instances of the test set.</p>
 </div>
 </div>
 
